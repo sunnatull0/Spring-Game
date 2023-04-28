@@ -21,7 +21,15 @@ public class Module : MonoBehaviour
             }
         }
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (_state)
+        {
+            // jump
+        }
+    }
+
     bool GetPlace(Vector2 pos)
     {
         RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, 1f);
